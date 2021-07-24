@@ -1,6 +1,8 @@
 # message
 
-A new Flutter project.
+Flutter first project
+
+Flutter pratic integration, clone of message list in messenger facebook,
 
 ## Getting Started
 
