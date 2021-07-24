@@ -8,52 +8,26 @@ class MessageAppBar extends StatelessWidget implements PreferredSizeWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.all(15),
-      child: Column(
+    return AppBar(
+      title: Row(
         children: [
-          const SizedBox(
-            height: 30,
+          RoundedImageWidget(
+            user: user,
+            dimension: 35,
           ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              IconButton(
-                  onPressed: () {
-                    Navigator.pop(context);
-                  },
-                  icon: const Icon(Icons.chevron_left)),
-              Row(
-                children: [
-                  RoundedImageWidget(
-                    user: user,
-                    dimension: 35,
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.only(left: 20),
-                    child: Text(user.userName),
-                  )
-                ],
-              ),
-              Row(
-                children: const [
-                  Padding(
-                    padding: EdgeInsets.symmetric(horizontal: 15),
-                    child: Icon(
-                      Icons.call,
-                      color: Colors.grey,
-                    ),
-                  ),
-                  Icon(
-                    Icons.info,
-                    color: Colors.grey,
-                  )
-                ],
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(left: 20),
+            child: Text(
+              user.userName,
+              style: const TextStyle(color: Colors.black),
+            ),
           )
         ],
       ),
+      actions: [
+        IconButton(onPressed: () {}, icon: const Icon(Icons.call)),
+        IconButton(onPressed: () {}, icon: const Icon(Icons.info)),
+      ],
     );
   }
 

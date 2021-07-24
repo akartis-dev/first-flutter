@@ -8,7 +8,15 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: const CustomAppBar(height: 60),
+      appBar: AppBar(
+        title: const Text("Message"),
+        actions: const [
+          Icon(
+            Icons.edit,
+            color: Colors.black,
+          )
+        ],
+      ),
       body: Container(
         color: Colors.white,
         padding: const EdgeInsets.symmetric(horizontal: 20),

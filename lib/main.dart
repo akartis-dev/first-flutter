@@ -14,6 +14,14 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       color: Colors.white,
+      theme: ThemeData(
+          appBarTheme: const AppBarTheme(
+        elevation: 0,
+        backgroundColor: Colors.white54,
+        iconTheme: IconThemeData(color: Colors.grey),
+        titleTextStyle: TextStyle(color: Colors.black, fontSize: 20),
+        toolbarTextStyle: TextStyle(color: Colors.black),
+      )),
       title: 'Messenger clone',
       initialRoute: '/',
       routes: {
